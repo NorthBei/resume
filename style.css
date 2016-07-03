@@ -171,29 +171,11 @@ body,html{
     margin-top: 50px;
 }
 
-.skill-chart{
-    height: 50px;
-    margin: 20px;
-}
-
 .document{
   width:38px;
   height:50px;
   position:relative;
   border-radius: 2px;
-}
-
-.left-wrapper,.center-wrapper,.right-wrapper{
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.center-wrapper{
-    padding-left: 20px;
-}
-
-.right-wrapper{
-    height: inherit;
 }
 
 .corner{
@@ -237,21 +219,50 @@ body,html{
     font-size: 18px;
 }
 
+.skill-chart{
+  width:93%;
+  display:flex;
+  margin: 20px;
+}
+
+.doc-icon{
+  height:50px;
+  flex: 0 0 38px;
+  
+  margin-top:2px;
+}
+
+.content{
+  height:inherit;
+  flex: 1 1 auto;
+  
+  padding-left: 20px;
+}
+
 .skill-name{
-    font-family: "微軟雅黑","微軟正黑體",sans-serif;
-    font-size: 18px;
-    font-weight: bold;
+  height:calc(100%-28px);
+  font-family: "微軟雅黑","微軟正黑體",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.wrapper{
+  height:28px;
+  display:flex;
+}
+
+.chart-bar{
+   height:inherit;
+	flex: 1 1 auto;
 }
 
 .skill-level{
-    padding-top: 24px;
-    margin-left: 26px;
-    font-size: 21px;
-}
-
-.bar_chart{
-    height: 28px;
-    width: 25vw;
+  height:inherit;
+  flex: 0 0 115px;
+  margin-left: 26px;
+  font-size: 21px;
+  
+  line-height: 28px;
 }
 
 #html-name{
