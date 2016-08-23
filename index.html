@@ -1,26 +1,38 @@
 <!DOCTYPE>
 <html>
 	<head>
-	  <meta charset="utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta property="og:image" content="https://northbei.github.io/resume/pic/og/preview_large.jpg">
+		<meta property="og:title" content="Hello, I am Eric Lin">
+		<meta property="og:description" content="I want to be a Full Stack Developer and Maker">
+		<meta property="og:url" content="https://northbei.github.io/resume/index.html">	
+		<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="rwd.css">
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	  <title>Eric Lin</title>
+		<title>Eric Lin</title>
 	</head>
 	<body>
-		<!--start section-->
-		<section class="section" id="start-section">
+		<!--home section-->
+		<section class="section" id="home-section">
+			<nav id="nav">
+				<ul>
+					<li class="nav_item" data-page="#home-section">HOME</li>
+					<li class="nav_item" data-page="#about-section">ABOUT</li>
+					<li class="nav_item" data-page="#skill-section">SKILL</li>
+					<li class="nav_item" data-page="#works-section">WORKS</li>
+				</ul>
+			</nav>
 			<span id="center-wrapper">
-				<div id="solgan">
-					<h1 id="solgan-main">DEVELOPER</h1>
-					<hr id="solgan-line">
-					<h3 id="solgan-sub">Front-End X Back-End X Android app</h3>
-				</div>
+				<h3 class="solgan">Hello , I am Eric Lin</h3>
 				<img id="device" src="pic/device.png" alt="computer&android phone">
+				<h3 class="solgan">Front-End X Back-End X Android app</h3>
 			</span>
-
+			
 			<div id="circles-wrapper">
+				<div id="email_dialog">
+					seekingfor520@gmail.com
+				</div>
 				<a href="https://www.facebook.com/profile.php?id=100002020489307">
 					<div class="info-circle">
 						<i class="fa fa-facebook" aria-hidden="true"></i>
@@ -34,7 +46,9 @@
 				<div class="info-circle" id="email">
 					<i class="fa fa-envelope-o" aria-hidden="true"></i>
 				</div>
+				
 			</div>
+			
 		</section>
 		<!--about section-->
 		<section class="section" id="about-section">
@@ -63,6 +77,9 @@
 						<li>
 							2016 全國大專校院軟體創作競賽 雲端網際服務與其他應用組 第三名 - Roader , 路得 
 						</li>	
+						<li>
+							鼎盛資科金融科技部 summer intern 
+						</li>
 					</ul>
 				</div>
 			</article>
@@ -219,7 +236,7 @@
 
 							<div class="pic">
 								<img class="pic-img" src="pic/SEO.png" alt="SEO">
-								<h6 class="pic-name">SEO</h6>
+								<h6 class="pic-name">Basic SEO</h6>
 							</div>
 						</div>
 
@@ -357,7 +374,7 @@
 					<hr class="article-line">
 					<h2 class="article-title">web application</h2>
 				</span>
-				<div class="article-content">
+				<div class="article-content web-app-content">
 							
 						<div class="pic">
 							<img class="pic-img works-img" src="pic/EECS.png" alt="EECS">
@@ -382,6 +399,22 @@
 					
 				</div>
 			</article>
+<!--chrome extension-->
+			<article class="article">
+				<span class="works-secondary-color">
+					<hr class="article-line">
+					<h2 class="article-title">chrome extension</h2>
+				</span>
+				<div class="article-content">
+					<div class="pic">
+						<img class="pic-img works-img" src="pic/BackSpace.png" alt="Roader">
+						<a href="https://chrome.google.com/webstore/detail/backspace/hlipjhnplogjbmafbjifidjlnecnikhj?utm_source=chrome-ntp-icon"><h6 class="pic-name">BackSpace</h6></a>
+						<p class="works-intro">在chrome 52版之後，為了解決在刪除字元時誤觸的問題，上一頁的快捷鍵從「Backspace」改成必須同時按下「alt」與「←」。
+改成這樣之後，對於我這種想回上一頁就反射性的按下BackSpace的人不太習慣。
+<p class="works-intro">於是就自己寫了這個plugin。一方面給自己用，一方面讓比較喜歡直接按BackSpace的人能夠下載來用</p>
+						<span class="works-skill">only Javascript</span>
+				</div>
+		</article>
 
 <!--android app-->
 			<article class="article">
@@ -425,12 +458,7 @@
 		</article>
 		<!--contact me section-->
 		<section></section>
-		<div id="email_slide_bar">
-			<a href="mailto:seekingfor520@gmail.com?Subject=Hello Eric Lin" target="blank">seekingfor520@gmail.com</a>
-			<div id="close_slide">
-				<i class="fa fa-times" aria-hidden="true"></i>
-			</div>
-		</div>
+		
 		<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 		<script src="js/script.js"></script>
 	</body>

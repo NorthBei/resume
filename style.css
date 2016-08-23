@@ -23,8 +23,9 @@ body,html{
     box-sizing: border-box;
 }
 
-#start-section{
-    background-color: #53aec6;
+#home-section{
+    /*background-color: #53aec6;*/
+    background-color: #5fbad2;
     height: 100vh;
     padding: 0;
     display:flex;
@@ -32,26 +33,47 @@ body,html{
     justify-content:center;
 }
 
-#solgan{
+#nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: rgba(255,255,255,0.4);*/
+    /*background-color: rgb(255,255,255);*/
+    /*box-shadow: 0px -1px 9px 1px #444;*/
+    z-index: 3;
+}
+
+#nav>ul{
+    display: flex;
+}
+
+.nav_item{
+    font-size: 21px;
+    color: #444444;
+    list-style: none;
+    padding: 0 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav_item:hover:after,.nav_active:after{
+    background-color: white;
+}
+
+.nav_item::after{
+    height: 3px;
+    width: 100%;
+    display: block;
+    content:"";
+}
+
+.solgan{
     color: white;
     font-weight:400;
     text-align:center;
     margin:0px auto;
     font-family: corbel_normal;
-}
-#solgan-main{
-    font-size:97px;
-    font-weight:initial;
-    margin: 0;
-    margin-bottom: -12px;
-}
-#solgan-line{
-    height:2px;
-    border-width:0;color:white;
-    width:47vw;
-    background-color:white
-}
-#solgan-sub{
     font-size: 37px;
     font-weight:initial;
     margin: 0;
@@ -90,6 +112,29 @@ body,html{
     color:#036b87;
     border-color:#036b87;
 }
+
+#email_dialog{
+    position: relative;
+    top: -11px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    font-size: 15px;
+}
+
+#email_dialog:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    bottom: -9px;
+    right: 27px;
+}
+
 /*ABOUT*/
 #about-section{
     color:white;
@@ -100,6 +145,7 @@ body,html{
     margin: 0;
     text-align: center;
     font-size: 78px;
+    margin-top: 20px;
     /*padding: 26px 0 10px 0;*/
 }
 
@@ -389,6 +435,7 @@ body,html{
 #android_mother_board{
     display: block;
     margin: 40px auto;
+    width: 65vw;
 }
 
 #android_studio{
@@ -397,12 +444,12 @@ body,html{
 
 /*--------------work temp start-----------------------*/
 #works-section{
-
+    background-color: #fafafa;
 }
 
 .works-secondary-color{
-    color:#444444;
-    background-color:#444444;
+    color:#5fbad2;
+    background-color:#5fbad2;
 }
 
 .works-intro{
@@ -420,9 +467,14 @@ body,html{
 .works-img{
     height: 80px;
 }
-
-#works-section>.article>.article-content>.pic{
+.web-app-content{
+    display: flex;
+    flex-wrap:wrap;
+}
+.web-app-content>.pic{
     margin: 80px;
+    margin-bottom: 0;
+    width: calc(50% - 160px);
 }
 .roader-intro{
     flex-wrap: nowrap;
@@ -433,34 +485,6 @@ body,html{
     width:calc(100%/3);
     display: inline-block;
 }
-/*-----------------temp end--------------------*/
-
-#email_slide_bar{
-    height:40px;
-    background-color: #333333;
-    position: fixed;
-    bottom: -40px;
-    font-family: sans-serif;
-    width: 100%;
-	left: 0;
-}
-
-#email_slide_bar>a,#close_slide{
-    vertical-align: middle;
-    color: white;
-    font-size: 20px;
-    line-height: 40px;
-    height: 40px;
-    margin: 0 10px;
-}
-
-#close_slide{
-    float:right;
-    cursor: pointer;
-    font-size: 30px;
-    margin-top: 5px;
-}
-
 /*scroll bar css*/
 
 ::-webkit-scrollbar {
