@@ -38,10 +38,8 @@ body,html{
     top: 0;
     left: 0;
     width: 100%;
-    /*background-color: rgba(255,255,255,0.4);*/
-    /*background-color: rgb(255,255,255);*/
-    /*box-shadow: 0px -1px 9px 1px #444;*/
     z-index: 3;
+    transition: background-color ease 0.8s;
 }
 
 #nav>ul{
@@ -50,7 +48,6 @@ body,html{
 
 .nav_item{
     font-size: 21px;
-    color: #444444;
     list-style: none;
     padding: 0 10px;
     color: white;
@@ -66,6 +63,7 @@ body,html{
     width: 100%;
     display: block;
     content:"";
+    transition: background-color ease 1s;
 }
 
 .solgan{
@@ -403,9 +401,10 @@ body,html{
 
 #php-bar{
     background: #b14739; /* Old browsers */
-    background: -moz-linear-gradient(left,  #6785b7 0%, #6785b7 50%, #dadada 50%, #dadada 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  #6785b7 0%,#6785b7 50%,#dadada 50%,#dadada 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  #6785b7 0%,#6785b7 50%,#dadada 50%,#dadada 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(left,  #6785b7 0%, #6785b7 20%, #dadada 20%, #dadada 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #6785b7 0%,#6785b7 20%,#dadada 20%,#dadada 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #6785b7 0%,#6785b7 20%,#dadada 20%,#dadada 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*50%*/
 }
 
 .pic-list{
@@ -418,6 +417,16 @@ body,html{
 
 .pic{
     margin: 0 25px;
+}
+
+pic-center-wrapper{
+    background-color: #eb6363;
+    border-radius: 100%;
+    width: inherit;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .pic-img{
@@ -445,11 +454,16 @@ body,html{
 /*--------------work temp start-----------------------*/
 #works-section{
     background-color: #fafafa;
+    color:#333333;  
 }
 
+/*#works-section>.section-title{
+    color:#78909C;
+}*/
+
 .works-secondary-color{
-    color:#5fbad2;
-    background-color:#5fbad2;
+    color:#E57373;
+    background-color:#E57373;
 }
 
 .works-intro{

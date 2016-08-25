@@ -5,16 +5,7 @@ var isNavScrolled = false;
 
 function init() {
     var email = document.getElementById("email");
-    email.addEventListener("click",function () {
-        var email_dialog = document.getElementById("email_dialog").style;
-        console.log(email_dialog.display);
-        if(email_dialog.display == "block"){
-            email_dialog.display = "none";
-        }
-        else{
-            email_dialog.display = "block";
-        }
-    },false);
+    email.addEventListener("click",toggleEmailDialog,false);
 
     document.addEventListener("scroll",scrollHandler);
     scrollHandler();
@@ -33,6 +24,17 @@ function init() {
     });
 }
 
+function toggleEmailDialog(){
+    var email_dialog = document.getElementById("email_dialog").style;
+
+    if(email_dialog.display == "block"){
+        email_dialog.display = "none";
+    }
+    else{
+        email_dialog.display = "block";
+    }
+}
+
 function scrollHandler(){
     var scrollHeight = document.documentElement.scrollTop||document.body.scrollTop;
 
@@ -40,14 +42,11 @@ function scrollHandler(){
         isNavScrolled = false;
         // nav.style.boxShadow = "none";
         nav.style.backgroundColor = "rgba(0,0,0,0)";
-        return;
     }
-
-    if(!isNavScrolled && scrollHeight>0){
+    else if(!isNavScrolled && scrollHeight>0){
         isNavScrolled = true;
         // nav.style.boxShadow = "0px -1px 9px 1px #444";
         nav.style.backgroundColor = "rgba(0,0,0,    0.25)";
-        return;
     }
 
     onScroll(scrollHeight);

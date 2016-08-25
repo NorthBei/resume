@@ -1,10 +1,5 @@
 #準備的pic src and psd file
 prepare/
 
-#rwd尚未製作完畢
-rwd.css
-
 #testing layout html file
-skill_chart _example.html
-
-
+testing/
